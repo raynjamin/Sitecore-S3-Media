@@ -1,0 +1,5 @@
+Sitecore.S3.MediaLibrary/Sitecore.S3.MediaLibrary/bin
+Sitecore.S3.MediaLibrary/Sitecore.S3.Master/bin
+Sitecore.S3.MediaLibrary/packages
+*.user
+obj

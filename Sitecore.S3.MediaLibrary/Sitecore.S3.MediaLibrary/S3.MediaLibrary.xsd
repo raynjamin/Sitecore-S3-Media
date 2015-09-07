@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:patch="http://www.sitecore.net/xmlconfig/" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.sitecore.net/xmlconfig/" />
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sitecore">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mediaLibrary">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="mediaProvider">
+                      <xs:complexType>
+                        <xs:attribute ref="patch:instead" use="required" />
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
