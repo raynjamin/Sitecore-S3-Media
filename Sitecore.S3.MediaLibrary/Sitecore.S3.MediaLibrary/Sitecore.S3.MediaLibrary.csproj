@@ -39,7 +39,47 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>..\packages\AWSSDK.Core.3.1.1.0\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>..\packages\AWSSDK.S3.3.1.2.1\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Cryptography">
+      <HintPath>..\packages\Imgix-CSharp.1.0.0\lib\net45\Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Imgix-CSharp">
+      <HintPath>..\packages\Imgix-CSharp.1.0.0\lib\net45\Imgix-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Lucene.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ItemWebApi">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.ItemWebApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Logging">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Update">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.Update.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Zip">
+      <HintPath>..\packages\SitecoreKernel.8.1.0.150819\lib\Sitecore.Zip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -61,6 +101,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="GitDeploy.bat" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -74,7 +115,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImgixEffects.cs" />
+    <Compile Include="Processors\SaveImagesToS3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RewriteUrl.cs" />
+    <Compile Include="S3Client.cs" />
+    <Compile Include="S3MediaCreator.cs" />
+    <Compile Include="S3MediaProvider.cs" />
+    <Compile Include="S3MediaUploader.cs" />
+    <Compile Include="S3MediaUploadResult.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
